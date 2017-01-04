@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="vendors/angular.min.js" charset="utf-8"></script>
+    <script src="scripts/ngLaunchpad.js" charset="utf-8"></script>
+    <meta charset="utf-8">
+    <title>NG Launchpad</title>
+</head>
+<body ng-app='myApp'>
+    <div ng-controller='LaunchpadController'>
+        <h1>NG Launchpad</h1>
+        What's your favorite movie? <input type="text" ng-model='movieName'>
+        <p>Your favorite movie is: {{ movieName }}</p>
+        <button ng-click='getMovieName()'>Get Movie Name</button>
+        <ul>
+          <li ng-repeat='movie in favoriteMovies'>
+            {{ movie }}
+          </li>
+        </ul>
+    </div>
+</body>
+</html>
